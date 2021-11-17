@@ -31,9 +31,13 @@ print(list(filter(lambda number: number % 2 == 0, numbers)))
 print(max(numbers) - min(numbers))
 
 #3
-for num in numbers:
-    if num == 2 and numbers[numbers.index(num) + 1] == 2:
-        print(True)
+# for num in numbers:
+#     if num == 2 and numbers[numbers.index(num) + 1] == 2:
+#         print(True)
+for i in range(len(numbers) - 1):
+    if numbers[i] == 2 and ((i + 1) <= len(numbers) - 1):
+        if numbers[i] == numbers[i + 1]:
+            print(True)
 
 #4
 do_count = True
